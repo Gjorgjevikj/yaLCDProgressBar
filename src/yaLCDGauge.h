@@ -14,6 +14,7 @@ public:
     void init();
     int size() const;
     void setPosition(byte, byte);
+    void setWidth(int w);
     void showGauge(int val);
     void showGaugePct(int pct);
 

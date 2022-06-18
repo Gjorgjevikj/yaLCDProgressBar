@@ -19,7 +19,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 16 cha
 //LCDProgressBar pb2(lcd, 8, 0, 8, true);
 LCDGauge bat(lcd, 6, 0, 0);
 
-unsigned int gauge = 35;
+//unsigned int gauge = 0;
 char buffer[10];         // helper buffer to store C-style strings (generated with sprintf function)
 
 void setup()
@@ -33,15 +33,60 @@ void setup()
     
 }
 
-void loop()
+void chargingAnimation(int state, int r = 200)
 {
-    bat.showGauge(gauge);
-    sprintf(buffer, "%3d", gauge);
-    lcd.setCursor(12, 1);
+    bat.showGaugePct(state);
+    sprintf(buffer, "Charging: %3d%%", state);
+    lcd.setCursor(0, 0);
     lcd.print(buffer);                            // print the string on the display
 
-    gauge++;
-    if (gauge > bat.size()+2) { gauge = 0; }
+    while (r)
+    {
+        int cs = state;
+        // animate
+        while (cs <= 100 && r > 0)
+        {
+            cs += 2;
+            bat.showGaugePct(cs);
+            delay(1);
+            r--;
+        }
+    }
+    bat.showGaugePct(state);
+}
 
+void loop()
+{
+    lcd.clear();
+    bat.setWidth(7);
+    bat.setPosition(0, 0);
+    for (int gauge = 0; gauge <= 100; gauge++)
+    {
+        bat.showGaugePct(gauge);
+        sprintf(buffer, "%3d%%", gauge);
+        lcd.setCursor(12, 1);
+        lcd.print(buffer);                            // print the string on the display
+        delay(10);  // wait for a while 
+    }
+    //bat.showGauge(gauge);
+    //sprintf(buffer, "%3d", gauge);
     delay(500);  // wait for a while 
+    lcd.clear();
+
+    bat.setWidth(6);
+    bat.setPosition(8, 1);
+    for (int gauge = 20; gauge <= 80; gauge+=10)
+    {
+        chargingAnimation(gauge);
+        //sprintf(buffer, "%3d%%", gauge);
+        //lcd.setCursor(12, 1);
+        //lcd.print(buffer);                            // print the string on the display
+        delay(100);  // wait for a while 
+    }
+
+    //gauge++;
+    //if (gauge > bat.size()+2) { gauge = 0; }
+    //if (gauge > 100) { gauge = 0; }
+
+    delay(1000);  // wait for a while 
 }

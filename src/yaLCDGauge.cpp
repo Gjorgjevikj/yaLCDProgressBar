@@ -31,9 +31,14 @@ void LCDGauge::setPosition(byte r, byte c)
     col = c;
 }
 
-int LCDGauge::size() const
+int LCDGauge::size() const // in pixel columns
 {
     return (width-2) * charCols;
+}
+
+void LCDGauge::setWidth(int w) // in characters (2 of which are used for the left/right border fo the gauge stylizing a battery) 
+{
+    width = w;
 }
 
 void LCDGauge::showGauge(int val)
