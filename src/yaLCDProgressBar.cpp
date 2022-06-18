@@ -19,9 +19,19 @@ void LCDProgressBar::setPosition(byte r, byte c)
     col = c;
 }
 
+int LCDProgressBar::size() const
+{
+    return width * charCols;
+}
+
 void LCDProgressBar::showProgress(int val)
 {
     showProgressAlt(val, alt);
+}
+
+void LCDProgressBar::showProgressPct(int val)
+{
+    showProgressAlt(val * (width * charCols) / 100, alt);
 }
 
 void LCDProgressBar::showProgressAlt(int val, bool alt)
@@ -41,11 +51,6 @@ void LCDProgressBar::showProgressAlt(int val, bool alt)
     while (blank--)
         display.write(byte(pbBlank));
     display.write(alt ? pbRight2 : pbRight);
-}
-
-void LCDProgressBar::showProgressPct(int val)
-{
-    showProgressAlt(val * (width * charCols) / 100, alt);
 }
 
 static uint8_t LCDProgressBar::createFillMask(uint8_t val)

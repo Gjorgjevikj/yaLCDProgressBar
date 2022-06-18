@@ -22,6 +22,11 @@ void LCDProgressThinBar::setPosition(byte r, byte c)
     col = c;
 }
 
+int LCDProgressThinBar::size() const
+{
+    return width * charCols;
+}
+
 void LCDProgressThinBar::showProgress(int val)
 {
     showProgressAlt(val, alt);

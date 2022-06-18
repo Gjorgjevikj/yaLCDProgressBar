@@ -12,6 +12,7 @@ public:
 
     LCDProgressThinBar(LiquidCrystal_I2C& _display, byte _width, byte _row = 0, byte _col = 0, bool _alt = false);
     virtual void init();
+    int size() const;
     void setPosition(byte, byte);
     void showProgress(int val);
     void showProgressPct(int pct);
