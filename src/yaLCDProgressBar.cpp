@@ -24,6 +24,11 @@ int LCDProgressBar::size() const
     return width * charCols;
 }
 
+void LCDProgressBar::setWidth(int w) // in characters 
+{
+    width = w;
+}
+
 void LCDProgressBar::showProgress(int val)
 {
     showProgressAlt(val, alt);

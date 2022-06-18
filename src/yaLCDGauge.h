@@ -8,7 +8,7 @@ class LCDGauge
 {
 public:
     enum PixelMatrix : byte { charRows = 8, charCols = 5 };
-    enum CustomChar : byte { batBlank, batLeft, batMid, batRight, batFull, pbBlank, bpMid, pbFull };
+    enum CustomChar : byte { batBlank, batLeft, batMid, batRight, batFull, pbBlank, bpMiddle, pbFull };
 
     LCDGauge(LiquidCrystal_I2C& _display, byte _width, byte _row = 0, byte _col = 0);
     void init();
