@@ -41,7 +41,7 @@ void LCDGauge::showGauge(int val)
     CreateCustomChars(val);
     uint8_t full, blank, partial;
     full = min(max(0, val / charCols), width - 2);
-    partial = (val < (width - 1)* charCols);
+    partial = (val < (width - 2)* charCols);
     blank = max(0, width - full - 2 - partial);
 
     display.setCursor(col, row);
@@ -57,7 +57,7 @@ void LCDGauge::showGauge(int val)
 
 void LCDGauge::showGaugePct(int val)
 {
-    showGauge(val * (width * charCols) / 100);
+    showGauge(min(val,100) * (width-2) * charCols / 100);
 }
 
 static uint8_t LCDGauge::createFillMask(uint8_t val)
