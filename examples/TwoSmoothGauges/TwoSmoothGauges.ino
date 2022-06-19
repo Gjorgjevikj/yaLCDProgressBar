@@ -6,7 +6,6 @@
 
 #include <LiquidCrystal_I2C.h>     // if you don't have I2C version of the display, use LiquidCrystal.h library instead
 #include <yaLCDProgressBar.h>     
-//#include <yaLCDProgressThinBar.h>     
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 //LiquidCrystal_I2C lcd(0x3f,16,2);    // set the LCD address to 0x3f for a 16 chars and 2 line display
@@ -14,8 +13,6 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 16 cha
 
 LCDProgressBar pb1(lcd, 12, 1, 0);
 LCDProgressBar pb2(lcd, 8, 0, 8, true);
-//LCDProgressThinBar pb1(lcd, 12, 1, 0);
-//LCDProgressThinBar pb2(lcd, 8, 0, 8, true);
 
 unsigned int gauge = 0;       
 char buffer[10];         // helper buffer to store C-style strings (generated with sprintf function)

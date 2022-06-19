@@ -1,6 +1,23 @@
 
+/*
+yaLCDBatteryGauge library v 1.0.0
+
+Yet another LCD battery gauge for the character based LCD displays for Arduino
+Library for displaying battery status gauge on a character based LCD like Hitachi HD44780 16x2 or 20x4
+Relies on the LiquidCrystal_I2C.h library (and should work on any platform that supports this library).
+Uses the user definable characters of the LCD display.
+
+This library is distributed in the hope that it will be useful, but
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE either express or implied.
+Released into the public domain.
+Distributed under: MIT License
+
+(c) Dejan Gjorgjevikj, 2022
+*/
+
 #include <Arduino.h>
-#include "yaLCDGauge.h"     
+#include "yaLCDBatteryGauge.h"     
 
 LCDGauge::LCDGauge(LiquidCrystal_I2C& _display, byte _width, byte _row, byte _col)
         : display(_display), width(_width), row(_row), col(_col)

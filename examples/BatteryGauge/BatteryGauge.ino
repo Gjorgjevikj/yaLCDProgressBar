@@ -6,21 +6,17 @@
 
 
 #include <LiquidCrystal_I2C.h>     // if you don't have I2C version of the display, use LiquidCrystal.h library instead
-//#include <yaLCDProgressBar.h>     
-//#include <yaLCDProgressThinBar.h>     
-#include <yaLCDGauge.h>
+#include <yaLCDBatteryGauge.h>
 
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 //LiquidCrystal_I2C lcd(0x3f,16,2);    // set the LCD address to 0x3f for a 16 chars and 2 line display
 // if you don't know the I2C address of the display, use I2C scanner first (https://playground.arduino.cc/Main/I2cScanner/)
 
-//LCDProgressBar pb1(lcd, 12, 1, 0);
-//LCDProgressBar pb2(lcd, 8, 0, 8, true);
 LCDGauge bat(lcd, 6, 0, 0);
 
 //unsigned int gauge = 0;
-char buffer[10];         // helper buffer to store C-style strings (generated with sprintf function)
+char buffer[16];         // helper buffer to store C-style strings (generated with sprintf function)
 
 void setup()
 {
@@ -33,7 +29,7 @@ void setup()
     
 }
 
-void chargingAnimation(int state, int r = 200)
+void chargingAnimation(int state, int r = 3)
 {
     bat.showGaugePct(state);
     sprintf(buffer, "Charging: %3d%%", state);
@@ -49,8 +45,9 @@ void chargingAnimation(int state, int r = 200)
             cs += 2;
             bat.showGaugePct(cs);
             delay(1);
-            r--;
         }
+        r--;
+        delay(200);
     }
     bat.showGaugePct(state);
 }
