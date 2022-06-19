@@ -32,7 +32,7 @@ https://github.com/Gjorgjevikj/yaLCDProgressBar.git
 #define VALUE(x) VALUE_TO_STRING(x)
 #define VAR_NAME_VALUE(var) #var "="  VALUE(var)
 
-#pragma message(VAR_NAME_VALUE(PB_TYPE))
+//#pragma message(VAR_NAME_VALUE(PB_TYPE))
 
 #if PB_TYPE == 0
 
