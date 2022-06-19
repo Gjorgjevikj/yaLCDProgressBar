@@ -4,6 +4,12 @@ Yet another LCD progress bar (gauge) for the character based LCD displays for Ar
 
 Relies on the LiquidCrystal_I2C.h or LiquidCrystal.h library (and should work on any platform that supports this library). Uses the user definable characters of the LCD display and can dispalay up to 2 smoot gauges simultaneously.
 
+![ProgressBar0](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/SmootProgressBar_0_16x2.png) ![ProgressBar1](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/SmootProgressBar_1_16x2.png)
+
+![Battery6](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/BatteryGauge_6_16x2.png) ![Battery7](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/BatteryGauge_7_16x2.png)
+
+![ProgressBar3](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/SmootProgressBar_1_20x4.png) ![Battery8](https://github.com/Gjorgjevikj/yaLCDProgressBar/blob/main/extras/BatteryGauge_7_20x4.png)
+
 Two libraries 
 - yaLCDProgressBar.h : The lenght of the progress bar can be configured as well as the postion on the LCD display. The state of the progress bar cen be set as a percentage or absolute value (pixels). Supports 3 differently looking progress bar types (configure in yaLCDpbConf.h).
   - 0 : Progress bar drawn using the whole hight of the character (8 pixels) and rounded corners
