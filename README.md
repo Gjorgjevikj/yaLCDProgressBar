@@ -29,4 +29,5 @@ Usage:
 
 Configuring is performed by editing the yaLCDpbConf.h file.
 Please include (uncomment) the appropriate library (either LiquidCrystal_I2C.h or LiquidCrystal.h) in the yaLCDpbConf.h
-Should also work with other LCD libraries that inherit from Arduino Print library and support write(uint8_t) and createChar(uint8_t, uint8_t[]) with minor changes in yaLCDpbConf.h (define LCD_OBJ to be the name of the LCD class). The type of the Progress bar is also configured here.
+It should also work with other libraries for the character LCD displays based on the Hitachi HD44780 or compatible controllers and support write(uint8_t) and createChar(uint8_t, uint8_t[]) with minor changes in yaLCDpbConf.h (define LCD_OBJ to be the name of the LCD class). The type of the Progress bar is also configured here.
+
