@@ -130,7 +130,7 @@ void LCDProgressBar::showProgressAlt(int val, bool alt)
 /// </summary>
 /// <param name="val">the value of the progress bar in pixels</param>
 /// <returns>the bitmask with ones on the left and zeroes on the left representing how much it is supposed to be filled</returns>
-static uint8_t LCDProgressBar::createFillMask(uint8_t val)
+uint8_t LCDProgressBar::createFillMask(uint8_t val)
 {
     uint8_t bitmask = 1 << charCols; // 0b100000;
     uint8_t mask = 0;
@@ -169,7 +169,7 @@ void LCDProgressBar::CreateCustomCharacter(uint8_t chpos, uint8_t mask, uint8_t 
 /// </summary>
 /// <param name="val">the filled part of the progress bar in pixels</param>
 /// <param name="alt">the first or the second bar</param>
-void LCDProgressBar::CreateCustomChars(int val, bool alt = false)
+void LCDProgressBar::CreateCustomChars(int val, bool alt)
 {
     uint8_t mask;
     mask = (val < charCols) ? createFillMask(val) : 0xff;

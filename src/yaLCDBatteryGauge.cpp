@@ -84,7 +84,7 @@ void LCDGauge::showGaugePct(int val)
     showGauge(min(val,100) * (width-2) * charCols / 100);
 }
 
-static uint8_t LCDGauge::createFillMask(uint8_t val)
+uint8_t LCDGauge::createFillMask(uint8_t val)
 {
     uint8_t bitmask = 1 << charCols; // 0b100000;
     uint8_t mask = 0;
