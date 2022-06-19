@@ -5,8 +5,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 LCDProgressBar	KEYWORD1
-LCDProgressThinBar	KEYWORD1
-LCDGauge	KEYWORD1
+LCDBatteryGauge	KEYWORD1
 PixelMatrix	KEYWORD1
 CustomChar	KEYWORD1
 
@@ -17,9 +16,9 @@ CustomChar	KEYWORD1
 init	KEYWORD2
 size	KEYWORD2
 setPosition	KEYWORD2
+setWidth	KEYWORD2
 showProgress	KEYWORD2
 showProgressPct	KEYWORD2
-setWidth	KEYWORD2
 
 
 ######################################

@@ -13,13 +13,15 @@ FITNESS FOR A PARTICULAR PURPOSE either express or implied.
 Released into the public domain.
 Distributed under: MIT License
 
+https://github.com/Gjorgjevikj/yaLCDProgressBar.git
+
 (c) Dejan Gjorgjevikj, 2022
 */
 
 #include <Arduino.h>
 #include "yaLCDBatteryGauge.h"     
 
-LCDGauge::LCDGauge(LiquidCrystal_I2C& _display, byte _width, byte _row, byte _col)
+LCDGauge::LCDGauge(LCD_OBJ & _display, byte _width, byte _row, byte _col)
         : display(_display), width(_width), row(_row), col(_col)
 {
 }

@@ -17,6 +17,8 @@ FITNESS FOR A PARTICULAR PURPOSE either express or implied.
 Released into the public domain.
 Distributed under: MIT License 
 
+https://github.com/Gjorgjevikj/yaLCDProgressBar.git
+
 (c) Dejan Gjorgjevikj, 2022
 */
 
@@ -33,7 +35,7 @@ Distributed under: MIT License
 /// <param name="_row">row position of the progress bar</param>
 /// <param name="_col">column position of the progress bar</param>
 /// <param name="_alt">first (false or omitted) or second (true)</param>
-LCDProgressBar::LCDProgressBar(LiquidCrystal_I2C& _display, byte _width, byte _row, byte _col, bool _alt)
+LCDProgressBar::LCDProgressBar(LCD_OBJ & _display, byte _width, byte _row, byte _col, bool _alt)
         : display(_display), width(_width), row(_row), col(_col), alt(_alt)
 {
 }

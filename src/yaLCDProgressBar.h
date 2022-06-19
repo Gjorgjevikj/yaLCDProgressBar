@@ -17,6 +17,8 @@ FITNESS FOR A PARTICULAR PURPOSE either express or implied.
 Released into the public domain.
 Distributed under: MIT License
 
+https://github.com/Gjorgjevikj/yaLCDProgressBar.git
+
 (c) Dejan Gjorgjevikj, 2022
 */
 
@@ -24,13 +26,7 @@ Distributed under: MIT License
 #define LCDPROGRESSBAR_H
 
 #include <Arduino.h>
-#include <LiquidCrystal_I2C.h>     // if you don't have I2C version of the display, use LiquidCrystal.h library instead
-
-#if __has_include("yaLCDpbConf.h")
 #include "yaLCDpbConf.h"
-#else
-#define PB_TYPE 0
-#endif
 
 #define VALUE_TO_STRING(x) #x
 #define VALUE(x) VALUE_TO_STRING(x)
@@ -76,7 +72,7 @@ public:
     enum PixelMatrix : byte { charRows = 8, charCols = 5 };
     enum CustomChar : byte { pbBlank, pbLeft, pbMiddle, pbRight, pbLeft2, pbMiddle2, pbRight2, pbFull CUSTCHAR_PB_FULL_C };
 
-    LCDProgressBar(LiquidCrystal_I2C& _display, byte _width, byte _row = 0, byte _col = 0, bool _alt = false);
+    LCDProgressBar(LCD_OBJ & _display, byte _width, byte _row = 0, byte _col = 0, bool _alt = false);
     void init();
     int size() const;
     void setWidth(int w);
@@ -90,7 +86,7 @@ protected:
     void CreateCustomCharacter(uint8_t chpos, uint8_t mask, uint8_t vframe, uint8_t hframe);
     void CreateCustomChars(int val, bool alt = false);
 
-    LiquidCrystal_I2C& display; // refference to the display object
+    LCD_OBJ & display; // refference to the display object
     byte width; // progress bar width in characters
     byte row; // row position of the progress bar
     byte col; // column position of the progress bar
