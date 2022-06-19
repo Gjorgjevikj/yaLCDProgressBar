@@ -55,7 +55,7 @@ void LCDProgressBar::init()
 }
 
 /// <summary>
-/// Sets the position od the progress bar
+/// Sets the position of the progress bar
 /// </summary>
 /// <param name="r">row position</param>
 /// <param name="c">column position</param>
