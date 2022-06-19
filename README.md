@@ -16,4 +16,4 @@ Known minorities:
 - the borders drawn with the gauge are considered as part of the gauge (except for the battery gauge that is dwawn in a different way) 
 
 So here it is, hopefully someone else can find a use of it (or make a comment).
-For explanation on the usage see the comments before the functions and llok at the examples.
+For explanation on the usage see the comments before the functions and look at the examples.
