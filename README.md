@@ -2,7 +2,7 @@
 
 Yet another LCD progress bar (gauge) for the character based LCD displays for Arduino
 
-Relies on the LiquidCrystal_I2C.h library (and should work on any platform that supports this library). Uses the user definable characters of the LCD display and can dispalay up to 2 smoot gauges simultaneously.
+Relies on the LiquidCrystal_I2C.h or LiquidCrystal.h library (and should work on any platform that supports this library). Uses the user definable characters of the LCD display and can dispalay up to 2 smoot gauges simultaneously.
 
 Two libraries 
 - yaLCDProgressBar.h : The lenght of the progress bar can be configured as well as the postion on the LCD display. The state of the progress bar cen be set as a percentage or absolute value (pixels). Supports 3 differently looking progress bar types (configure in yaLCDpbConf.h).
@@ -16,4 +16,4 @@ Known minorities:
 - the borders drawn with the gauge are considered as part of the gauge (except for the battery gauge that is dwawn in a different way) 
 
 So here it is, hopefully someone else can find a use of it (or make a comment).
-For explanation on the usage see the comments before the functions and llok at the examples.
+For explanation on the usage see the comments before the functions and look at the examples.
