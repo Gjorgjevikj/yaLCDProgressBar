@@ -17,3 +17,10 @@ Known minorities:
 
 So here it is, hopefully someone else can find a use of it (or make a comment).
 For explanation on the usage see the comments before the functions and look at the examples.
+You can also see the execution of the examples on the [wokwi](https://wokwi.com/) emulator on-line ([TwoSmoothGauges.ino](https://wokwi.com/projects/334758694868746834) and [TwoSmoothGauges20x4](https://wokwi.com/projects/334841453200015954) or see extras).
+
+Usage:
+
+Configuring is performed by editing the yaLCDpbConf.h file.
+Please include (uncomment) the appropriate library (either LiquidCrystal_I2C.h or LiquidCrystal.h) in the yaLCDpbConf.h
+Should also work with other LCD libraries that inherit from Arduino Print library and support write(uint8_t) and createChar(uint8_t, uint8_t[]) with minor changes in yaLCDpbConf.h (define LCD_OBJ to be the name of the LCD class). The type of the Progress bar is also configured here.
