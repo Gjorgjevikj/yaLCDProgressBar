@@ -23,7 +23,7 @@ Known minorities:
 
 So here it is, hopefully someone else can find a use of it (or make a comment).
 For explanation on the usage see the comments before the functions and look at the examples.
-You can also see the execution of the examples on the [wokwi](https://wokwi.com/) emulator on-line ([TwoSmoothGauges.ino](https://wokwi.com/projects/334758694868746834) and [TwoSmoothGauges20x4](https://wokwi.com/projects/334841453200015954) or see extras).
+You can also see the execution of the examples on the [wokwi](https://wokwi.com/) emulator on-line ([TwoSmoothGauges.ino](https://wokwi.com/projects/334758694868746834) and [TwoSmoothGauges20x4.ino](https://wokwi.com/projects/334841453200015954) or see extras).
 
 Usage:
 
