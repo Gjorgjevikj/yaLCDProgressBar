@@ -1,4 +1,4 @@
-try the new library under developement ![SmoothLCDProgressBars](https://github.com/Gjorgjevikj/SmoothLCDProgressBars) - same look, will be much more flexible
+Check the new library (under developement) ![SmoothLCDProgressBars](https://github.com/Gjorgjevikj/SmoothLCDProgressBars) - same look&feel, will be much more flexible
 
 # yaLCDProgressBar
 
