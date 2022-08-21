@@ -1,6 +1,13 @@
-Check the new library (under developement) ![SmoothLCDProgressBars](https://github.com/Gjorgjevikj/SmoothLCDProgressBars) - same look&feel, supports up to 4 independent progress bars, more flexible and configurable, easier to use, ...
+# Notice
 
-# yaLCDProgressBar
+**With the publication of its succesor [SmoothProgres](https://github.com/Gjorgjevikj/SmoothProgress) library (also added to Arduino library manager),
+this library has become less usefull.**
+
+I will keep the repository opened for archive reasons, but I will not make any further development on it.
+
+---
+
+### yaLCDProgressBar
 
 Yet another LCD progress bar (gauge) for the character based LCD displays for Arduino
 
